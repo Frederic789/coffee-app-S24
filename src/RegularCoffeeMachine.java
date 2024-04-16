@@ -4,7 +4,7 @@ import cupboard.*;
 
 import java.util.Map;
 
-public class RegularCoffeeMachine {
+public class RegularCoffeeMachine implements CoffeeMachineBehavior {
 
     private final Configuration config;
     private final Map<CoffeeSelection, CoffeeGrounds> groundCoffee;

@@ -4,10 +4,13 @@ import java.util.Map;
 import coffee_bin.Coffee;
 import coffee_bin.CoffeeBean;
 import coffee_bin.CoffeeGrounds;
+
+
 import cupboard.*;
 public class CoffeeApp {
-    final private RegularCoffeeMachine coffeeMachine;
-    public CoffeeApp(RegularCoffeeMachine coffeeMachine) {
+    final private CoffeeMachineBehavior coffeeMachine;
+   // final private RegularCoffeeMachine coffeeMachine;
+    public CoffeeApp(CoffeeMachineBehavior coffeeMachine) { 
         this.coffeeMachine = coffeeMachine;
     }
     public Coffee prepareCoffee(CoffeeSelection selection) throws CoffeeException {
@@ -24,7 +27,7 @@ public class CoffeeApp {
         beans.put(CoffeeSelection.LATTE, new CoffeeBean("Dark Roast", 1000));
 
         //TODO: Test your Software Design against the assignment OUTPUT by uncommenting EACH of the two lines below, ONE at a time
-        RegularCoffeeMachine machine = new RegularCoffeeMachine(grounds);
+         RegularCoffeeMachine machine = new RegularCoffeeMachine(grounds);
         //PremiumCoffeeMachine machine = new PremiumCoffeeMachine(beans);
         //TODO: END
 
